@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozkłady Jazdy KZMK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* BANNER */
+        .banner {
+            background-image: url('cwel.jpg'); /* Tutaj wpisujesz nazwę swojego pliku */
+            background-size: cover;                /* Zdjęcie automatycznie rozciągnie się na cały baner */
+            background-position: center;           /* Zdjęcie będzie wyśrodkowane */
+            background-repeat: no-repeat;          /* Zdjęcie nie będzie się powtarzać w kafelki */
+            color: #fff;
+            padding: 35px 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .banner-text { text-align: right; }
+        .banner-text h1 { font-size: 24px; margin-bottom: 5px; }
+        .banner-text p { font-size: 16px; font-weight: bold; }
+
+        /* MENU */
+        .navbar {
+            background-color: #002d62;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 15px;
+            font-size: 14px;
+            border-right: 1px solid #fff;
+        }
+
+        .navbar a:last-child { border-right: none; }
+        .navbar a:hover { text-decoration: underline; }
+
+        /* SZYBKI WYBÓR LINII */
+        .quick-lines {
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .quick-lines p {
+            font-size: 11px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+        .small-box {
+            display: inline-flex;
+            width: 25px;
+            height: 25px;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            text-decoration: none;
+            margin-right: 4px;
+        }
+        .bg-blue { background-color: #2196F3; color: #fff; }
+        .bg-green { background-color: #4CAF50; color: #fff; }
+
+        /* GŁÓWNY PANEL (ROZKŁADY) */
+        .main-content {
+            padding: 20px;
+        }
+
+        .main-content h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-text {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* TABELA ROZKŁADU */
+        .timetable-header {
+            background-color: #fff8db;
+            border: 1px solid #e6dbb3;
+            padding: 10px;
+            font-weight: bold;
+            color: #b39800;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .timetable-row {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dotted #ccc;
+            padding: 15px 0;
+        }
+
+        .line-number {
+            width: 80px;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        .route-text {
+            flex-grow: 1;
+            font-size: 12px;
+            color: #444;
+            line-height: 1.5;
+            padding-right: 15px;
+        }
+
+        .route-text strong { color: #000; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Komunalny Zakład Miejskiej Komunikacji</h1>
+            <p>Spółka z o.o. we Niżinowie</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="#">Strona główna KZMK</a>
+        <a href="#">Rozkłady jazdy</a>
+        <a href="#">Przystanki</a>
+        <a href="#">Mapa / wyszukiwarka połączeń</a>
+        <a href="#">Wersja mobilna</a>
+    </nav>
+
+    <div class="quick-lines">
+        <p>Linie autobusowe zwykłe</p>
+        <a href="#" class="small-box bg-blue">1</a>
+        <a href="#" class="small-box bg-blue">2</a>
+    </div>
+
+    <div class="main-content">
+        <h2>Rozkłady jazdy</h2>
+        <p class="info-text">Wybierz linię klikając na jej oznaczenie lub na przebieg trasy.</p>
+
+        <div class="timetable-header">
+          Linie autobusowe
+        </div>
+
+        <div class="timetable-row">
+            <div class="line-number">1</div>
+            <div class="route-text">
+                <strong>JELONKOWA</strong> - Nagórskiego - Tumska/Szkola - <strong>ZIĘBA</strong>
+            </div>
+        </div>
+
+        <div class="timetable-row">
+            <div class="line-number">2</div>
+            <div class="route-text">
+                <strong>WIEJSKA</strong> - PRZYSTANKI BEDA PODANE WKRÓTCE - <strong>DWORZEC PKP PKS</strong>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
